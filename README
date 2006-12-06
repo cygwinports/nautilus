@@ -3,31 +3,33 @@ nautilus
 The file manager for the GNOME desktop.
 
 Runtime requirements:
-  cygwin-1.5.21-1
-  ORBit2-2.14.0-1
-  eel2-2.14.3-1
-  glib2-2.10.3-1
-  gtk2-x11-2.8.20-1
+  cygwin-1.5.22-1
+  ORBit2-2.14.3-1
+  atk-1.12.3-1
+  eel2-2.16.3-2
+  glib2-2.12.4-1
+  gtk2-x11-2.10.6-1
+  libX11_6-1.1.1-1
   libart_lgpl2-2.3.17-1
-  libbonobo2-2.14.0-1
+  libbonobo2-2.16.0-1
   libexif-0.6.12-1
-  libgnome-desktop2-2.14.2-1
-  librsvg2-2.14.4-1
+  libgnome-desktop2-2.16.2-1
+  librsvg2-2.16.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.21-1
-  autoconf2.5-2.59-2
+  cygwin-1.5.22-1
+  autoconf2.5-2.60-1
   automake1.9-1.9.6-1
-  binutils-20060709-1
-  cygport-0.2.5-1
+  binutils-20060817-1
+  cygport-0.2.7-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
   intltool-0.35.0-1
-  libtool1.5-1.5.22-1
+  libtool1.5-1.5.23a-1
   make-3.81-1
-  pkg-config-0.20-1
-  sed-4.1.5-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
 
 Canonical homepage:
   http://www.gnome.org/
@@ -38,15 +40,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack nautilus-2.14.3-1-src.tar.bz2
+  unpack nautilus-2.16.3-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./nautilus-2.14.3-1.cygport all
+  cygport ./nautilus-2.16.3-1.cygport all
 
 This will create:
-  /usr/src/nautilus-2.14.3-1-src.tar.bz2
-  /usr/src/nautilus-2.14.3-1.tar.bz2
+  /usr/src/nautilus-2.16.3-1-src.tar.bz2
+  /usr/src/nautilus-2.16.3-1.tar.bz2
 
 -------------------------------------------
 
@@ -67,6 +69,7 @@ Files included in the binary package:
   /usr/include/nautilus/libnautilus-extension/nautilus-location-widget-provider.h
   /usr/include/nautilus/libnautilus-extension/nautilus-menu-item.h
   /usr/include/nautilus/libnautilus-extension/nautilus-menu-provider.h
+  /usr/include/nautilus/libnautilus-extension/nautilus-menu.h
   /usr/include/nautilus/libnautilus-extension/nautilus-property-page-provider.h
   /usr/include/nautilus/libnautilus-extension/nautilus-property-page.h
   /usr/lib/bonobo/servers/Nautilus_shell.server
@@ -79,19 +82,19 @@ Files included in the binary package:
   /usr/share/applications/nautilus-home.desktop
   /usr/share/applications/nautilus.desktop
   /usr/share/applications/network-scheme.desktop
-  /usr/share/doc/Cygwin/nautilus-2.14.3.README
-  /usr/share/doc/nautilus-2.14.3/AUTHORS
-  /usr/share/doc/nautilus-2.14.3/COPYING
-  /usr/share/doc/nautilus-2.14.3/COPYING-DOCS
-  /usr/share/doc/nautilus-2.14.3/COPYING.LIB
-  /usr/share/doc/nautilus-2.14.3/ChangeLog
-  /usr/share/doc/nautilus-2.14.3/HACKING
-  /usr/share/doc/nautilus-2.14.3/INSTALL
-  /usr/share/doc/nautilus-2.14.3/MAINTAINERS
-  /usr/share/doc/nautilus-2.14.3/NEWS
-  /usr/share/doc/nautilus-2.14.3/README
-  /usr/share/doc/nautilus-2.14.3/THANKS
-  /usr/share/doc/nautilus-2.14.3/TODO
+  /usr/share/doc/Cygwin/nautilus-2.16.3.README
+  /usr/share/doc/nautilus-2.16.3/AUTHORS
+  /usr/share/doc/nautilus-2.16.3/COPYING
+  /usr/share/doc/nautilus-2.16.3/COPYING-DOCS
+  /usr/share/doc/nautilus-2.16.3/COPYING.LIB
+  /usr/share/doc/nautilus-2.16.3/ChangeLog
+  /usr/share/doc/nautilus-2.16.3/HACKING
+  /usr/share/doc/nautilus-2.16.3/INSTALL
+  /usr/share/doc/nautilus-2.16.3/MAINTAINERS
+  /usr/share/doc/nautilus-2.16.3/NEWS
+  /usr/share/doc/nautilus-2.16.3/README
+  /usr/share/doc/nautilus-2.16.3/THANKS
+  /usr/share/doc/nautilus-2.16.3/TODO
   /usr/share/locale/af/LC_MESSAGES/nautilus.mo
   /usr/share/locale/am/LC_MESSAGES/nautilus.mo
   /usr/share/locale/ar/LC_MESSAGES/nautilus.mo
@@ -99,12 +102,15 @@ Files included in the binary package:
   /usr/share/locale/be/LC_MESSAGES/nautilus.mo
   /usr/share/locale/bg/LC_MESSAGES/nautilus.mo
   /usr/share/locale/bn/LC_MESSAGES/nautilus.mo
+  /usr/share/locale/bn_IN/LC_MESSAGES/nautilus.mo
+  /usr/share/locale/br/LC_MESSAGES/nautilus.mo
   /usr/share/locale/bs/LC_MESSAGES/nautilus.mo
   /usr/share/locale/ca/LC_MESSAGES/nautilus.mo
   /usr/share/locale/cs/LC_MESSAGES/nautilus.mo
   /usr/share/locale/cy/LC_MESSAGES/nautilus.mo
   /usr/share/locale/da/LC_MESSAGES/nautilus.mo
   /usr/share/locale/de/LC_MESSAGES/nautilus.mo
+  /usr/share/locale/dz/LC_MESSAGES/nautilus.mo
   /usr/share/locale/el/LC_MESSAGES/nautilus.mo
   /usr/share/locale/en_CA/LC_MESSAGES/nautilus.mo
   /usr/share/locale/en_GB/LC_MESSAGES/nautilus.mo
@@ -121,6 +127,7 @@ Files included in the binary package:
   /usr/share/locale/hi/LC_MESSAGES/nautilus.mo
   /usr/share/locale/hr/LC_MESSAGES/nautilus.mo
   /usr/share/locale/hu/LC_MESSAGES/nautilus.mo
+  /usr/share/locale/hy/LC_MESSAGES/nautilus.mo
   /usr/share/locale/id/LC_MESSAGES/nautilus.mo
   /usr/share/locale/is/LC_MESSAGES/nautilus.mo
   /usr/share/locale/it/LC_MESSAGES/nautilus.mo
@@ -132,6 +139,7 @@ Files included in the binary package:
   /usr/share/locale/li/LC_MESSAGES/nautilus.mo
   /usr/share/locale/lt/LC_MESSAGES/nautilus.mo
   /usr/share/locale/lv/LC_MESSAGES/nautilus.mo
+  /usr/share/locale/mg/LC_MESSAGES/nautilus.mo
   /usr/share/locale/mi/LC_MESSAGES/nautilus.mo
   /usr/share/locale/mk/LC_MESSAGES/nautilus.mo
   /usr/share/locale/ml/LC_MESSAGES/nautilus.mo
@@ -141,8 +149,8 @@ Files included in the binary package:
   /usr/share/locale/ne/LC_MESSAGES/nautilus.mo
   /usr/share/locale/nl/LC_MESSAGES/nautilus.mo
   /usr/share/locale/nn/LC_MESSAGES/nautilus.mo
-  /usr/share/locale/no/LC_MESSAGES/nautilus.mo
   /usr/share/locale/nso/LC_MESSAGES/nautilus.mo
+  /usr/share/locale/or/LC_MESSAGES/nautilus.mo
   /usr/share/locale/pa/LC_MESSAGES/nautilus.mo
   /usr/share/locale/pl/LC_MESSAGES/nautilus.mo
   /usr/share/locale/pt/LC_MESSAGES/nautilus.mo
@@ -172,7 +180,6 @@ Files included in the binary package:
   /usr/share/locale/zh_TW/LC_MESSAGES/nautilus.mo
   /usr/share/locale/zu/LC_MESSAGES/nautilus.mo
   /usr/share/mime/application/x-gnome-saved-search.xml
-  /usr/share/mime/mime.cache
   /usr/share/mime/packages/nautilus.xml
   /usr/share/nautilus/browser.xml
   /usr/share/nautilus/glade/nautilus-bookmarks-window.glade
@@ -232,6 +239,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 2.16.3-1 -----
+Version bump for GNOME 2.16.
 
 ----- version 2.14.3-1 -----
 Version bump.

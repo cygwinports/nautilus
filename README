@@ -3,30 +3,44 @@ nautilus
 The file manager for the GNOME desktop.
 
 Runtime requirements:
-  cygwin-1.5.22-1
-  ORBit2-2.14.3-1
-  atk-1.12.3-1
-  eel2-2.16.3-2
-  glib2-2.12.4-1
-  gtk2-x11-2.10.6-1
+  cygwin-1.5.24-2
+  GConf2-2.18.0.1-1
+  ORBit2-2.14.7-1
+  atk-1.18.0-1
+  eel2-2.18.3-1
+  gdk-pixbuf2-2.10.13-1
+  glib2-2.12.12-2
+  gnome-vfs2-2.18.1-1
+  gtk2-x11-2.10.13-1
   libX11_6-1.1.1-1
-  libart_lgpl2-2.3.17-1
-  libbonobo2-2.16.0-1
-  libexif-0.6.12-1
-  libgnome-desktop2-2.16.2-1
+  libart_lgpl2-2.3.19-1
+  libbonobo2-2.18.0-1
+  libcairo2-1.4.10-1
+  libesound0-0.2.38-1
+  libexif12-0.6.16-1
+  libgailutil18-1.18.0-1
+  libglade2-2.6.1-1
+  libgnome-desktop2-2.18.3-1
+  libgnome2-2.18.0-1
+  libgnomecanvas2-2.14.0-1
+  libgnomeui2-2.18.1-1
+  libintl8-0.15-1
   librsvg2-2.16.1-1
+  libxml2-2.6.28-2
+  pango-1.16.4-1
+  startup-notification-0.9-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.22-1
-  autoconf2.5-2.60-1
-  automake1.9-1.9.6-1
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.10-1.10-1
   binutils-20060817-1
-  cygport-0.2.7-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  intltool-0.35.0-1
-  libtool1.5-1.5.23a-1
+  cygport-0.3.5-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  intltool-0.35.5-1
+  libtool1.5-1.5.23a-2
   make-3.81-1
   pkg-config-0.21-1
   sed-4.1.5-2
@@ -40,15 +54,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack nautilus-2.16.3-1-src.tar.bz2
+  unpack nautilus-2.18.3-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./nautilus-2.16.3-1.cygport all
+  cygport ./nautilus-2.18.3-1.cygport all
 
 This will create:
-  /usr/src/nautilus-2.16.3-1-src.tar.bz2
-  /usr/src/nautilus-2.16.3-1.tar.bz2
+  /usr/src/nautilus-2.18.3-1-src.tar.bz2
+  /usr/src/nautilus-2.18.3-1.tar.bz2
 
 -------------------------------------------
 
@@ -82,24 +96,30 @@ Files included in the binary package:
   /usr/share/applications/nautilus-home.desktop
   /usr/share/applications/nautilus.desktop
   /usr/share/applications/network-scheme.desktop
-  /usr/share/doc/Cygwin/nautilus-2.16.3.README
-  /usr/share/doc/nautilus-2.16.3/AUTHORS
-  /usr/share/doc/nautilus-2.16.3/COPYING
-  /usr/share/doc/nautilus-2.16.3/COPYING-DOCS
-  /usr/share/doc/nautilus-2.16.3/COPYING.LIB
-  /usr/share/doc/nautilus-2.16.3/ChangeLog
-  /usr/share/doc/nautilus-2.16.3/HACKING
-  /usr/share/doc/nautilus-2.16.3/INSTALL
-  /usr/share/doc/nautilus-2.16.3/MAINTAINERS
-  /usr/share/doc/nautilus-2.16.3/NEWS
-  /usr/share/doc/nautilus-2.16.3/README
-  /usr/share/doc/nautilus-2.16.3/THANKS
-  /usr/share/doc/nautilus-2.16.3/TODO
+  /usr/share/doc/Cygwin/nautilus-2.18.3.README
+  /usr/share/doc/nautilus-2.18.3/AUTHORS
+  /usr/share/doc/nautilus-2.18.3/COPYING
+  /usr/share/doc/nautilus-2.18.3/COPYING-DOCS
+  /usr/share/doc/nautilus-2.18.3/COPYING.LIB
+  /usr/share/doc/nautilus-2.18.3/ChangeLog
+  /usr/share/doc/nautilus-2.18.3/HACKING
+  /usr/share/doc/nautilus-2.18.3/INSTALL
+  /usr/share/doc/nautilus-2.18.3/MAINTAINERS
+  /usr/share/doc/nautilus-2.18.3/NEWS
+  /usr/share/doc/nautilus-2.18.3/README
+  /usr/share/doc/nautilus-2.18.3/THANKS
+  /usr/share/doc/nautilus-2.18.3/TODO
+  /usr/share/icons/hicolor/16x16/apps/nautilus.png
+  /usr/share/icons/hicolor/22x22/apps/nautilus.png
+  /usr/share/icons/hicolor/24x24/apps/nautilus.png
+  /usr/share/icons/hicolor/32x32/apps/nautilus.png
+  /usr/share/icons/hicolor/scalable/apps/nautilus.svg
   /usr/share/locale/af/LC_MESSAGES/nautilus.mo
   /usr/share/locale/am/LC_MESSAGES/nautilus.mo
   /usr/share/locale/ar/LC_MESSAGES/nautilus.mo
   /usr/share/locale/az/LC_MESSAGES/nautilus.mo
   /usr/share/locale/be/LC_MESSAGES/nautilus.mo
+  /usr/share/locale/be@latin/LC_MESSAGES/nautilus.mo
   /usr/share/locale/bg/LC_MESSAGES/nautilus.mo
   /usr/share/locale/bn/LC_MESSAGES/nautilus.mo
   /usr/share/locale/bn_IN/LC_MESSAGES/nautilus.mo
@@ -114,6 +134,7 @@ Files included in the binary package:
   /usr/share/locale/el/LC_MESSAGES/nautilus.mo
   /usr/share/locale/en_CA/LC_MESSAGES/nautilus.mo
   /usr/share/locale/en_GB/LC_MESSAGES/nautilus.mo
+  /usr/share/locale/eo/LC_MESSAGES/nautilus.mo
   /usr/share/locale/es/LC_MESSAGES/nautilus.mo
   /usr/share/locale/et/LC_MESSAGES/nautilus.mo
   /usr/share/locale/eu/LC_MESSAGES/nautilus.mo
@@ -150,6 +171,7 @@ Files included in the binary package:
   /usr/share/locale/nl/LC_MESSAGES/nautilus.mo
   /usr/share/locale/nn/LC_MESSAGES/nautilus.mo
   /usr/share/locale/nso/LC_MESSAGES/nautilus.mo
+  /usr/share/locale/oc/LC_MESSAGES/nautilus.mo
   /usr/share/locale/or/LC_MESSAGES/nautilus.mo
   /usr/share/locale/pa/LC_MESSAGES/nautilus.mo
   /usr/share/locale/pl/LC_MESSAGES/nautilus.mo
@@ -231,14 +253,15 @@ Files included in the binary package:
   /usr/share/pixmaps/nautilus/emblems.png
   /usr/share/pixmaps/nautilus/erase.png
   /usr/share/pixmaps/nautilus/knob.png
-  /usr/share/pixmaps/nautilus/nautilus-launch-icon.png
   /usr/share/pixmaps/nautilus/note-indicator.png
-  /usr/share/pixmaps/nautilus/text-selection-frame.png
   /usr/share/pixmaps/nautilus/thumbnail_frame.png
 
 ------------------
 
 Port Notes:
+
+----- version 2.18.3-1 -----
+Version bump for GNOME 2.18.
 
 ----- version 2.16.3-1 -----
 Version bump for GNOME 2.16.

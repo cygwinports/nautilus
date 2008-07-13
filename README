@@ -8,11 +8,10 @@ Runtime requirements:
   ORBit2-2.14.13-1
   atk-1.22.0-1
   eel2-2.22.2-1
-  gdk-pixbuf2-2.12.10-1
-  glib2-2.16.3-1
-  gtk2-x11-2.12.10-1
+  gdk-pixbuf2-2.12.11-1
+  glib2-2.16.4-1
+  gtk2-x11-2.12.11-1
   gvfs-0.2.5-1
-  libX11_6-1.1.3-1
   libart_lgpl2-2.3.20-1
   libbonobo2-2.22.0-1
   libcairo2-1.6.4-1
@@ -27,8 +26,9 @@ Runtime requirements:
   libgnomeui2-2.22.1-1
   libintl8-0.15-1
   librsvg2-2.22.2-1
+  libX11_6-1.1.3-1
   libxml2-2.6.32-1
-  pango-1.20.3-1
+  pango-1.20.5-1
   startup-notification-0.9-1
 
 Build requirements:
@@ -56,15 +56,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack nautilus-2.22.4-1-src.tar.bz2
+  unpack nautilus-2.22.5.1-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./nautilus-2.22.4-1.cygport all
+  cygport ./nautilus-2.22.5.1-1.cygport all
 
 This will create:
-  /usr/src/nautilus-2.22.4-1-src.tar.bz2
-  /usr/src/nautilus-2.22.4-1.tar.bz2
+  /usr/src/nautilus-2.22.5.1-1-src.tar.bz2
+  /usr/src/nautilus-2.22.5.1-1.tar.bz2
 
 -------------------------------------------
 
@@ -100,18 +100,18 @@ Files included in the binary package:
   /usr/share/applications/nautilus-home.desktop
   /usr/share/applications/nautilus.desktop
   /usr/share/applications/network-scheme.desktop
-  /usr/share/doc/nautilus-2.22.4/AUTHORS
-  /usr/share/doc/nautilus-2.22.4/COPYING
-  /usr/share/doc/nautilus-2.22.4/COPYING-DOCS
-  /usr/share/doc/nautilus-2.22.4/COPYING.LIB
-  /usr/share/doc/nautilus-2.22.4/ChangeLog
-  /usr/share/doc/nautilus-2.22.4/HACKING
-  /usr/share/doc/nautilus-2.22.4/INSTALL
-  /usr/share/doc/nautilus-2.22.4/MAINTAINERS
-  /usr/share/doc/nautilus-2.22.4/NEWS
-  /usr/share/doc/nautilus-2.22.4/README
-  /usr/share/doc/nautilus-2.22.4/THANKS
-  /usr/share/doc/nautilus-2.22.4/TODO
+  /usr/share/doc/nautilus-2.22.5.1/AUTHORS
+  /usr/share/doc/nautilus-2.22.5.1/COPYING
+  /usr/share/doc/nautilus-2.22.5.1/COPYING-DOCS
+  /usr/share/doc/nautilus-2.22.5.1/COPYING.LIB
+  /usr/share/doc/nautilus-2.22.5.1/ChangeLog
+  /usr/share/doc/nautilus-2.22.5.1/HACKING
+  /usr/share/doc/nautilus-2.22.5.1/INSTALL
+  /usr/share/doc/nautilus-2.22.5.1/MAINTAINERS
+  /usr/share/doc/nautilus-2.22.5.1/NEWS
+  /usr/share/doc/nautilus-2.22.5.1/README
+  /usr/share/doc/nautilus-2.22.5.1/THANKS
+  /usr/share/doc/nautilus-2.22.5.1/TODO
   /usr/share/icons/hicolor/16x16/apps/nautilus.png
   /usr/share/icons/hicolor/22x22/apps/nautilus.png
   /usr/share/icons/hicolor/24x24/apps/nautilus.png
@@ -282,6 +282,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 2.22.5.1-1 -----
+Version bump.
 
 ----- version 2.22.4-1 -----
 Version bump.

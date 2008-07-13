@@ -1,0 +1,5 @@
+inherit gnome2
+
+DESCRIPTION="GNOME desktop file manager"
+
+CYGCONF_ARGS="--disable-beagle --disable-tracker"

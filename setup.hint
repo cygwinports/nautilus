@@ -1,4 +1,4 @@
 category: Gnome
-requires: cygwin GConf2 ORBit2 atk eel2 glib2 gdk-pixbuf2 gvfs gtk2-x11 libX11_6 libart_lgpl2 libbonobo2 libcairo2 libesound0 libexempi3 libexif12 libgailutil18 libglade2 libgnome-desktop2 libgnome2 libgnomecanvas2 libgnomeui2 libintl8 librsvg2 libxml2 pango startup-notification
+requires: cygwin GConf2 gvfs libatk1.0_0 libbonobo2_0 libcairo2 libeel2_2 libexempi3 libexif12 libgailutil18 libgconf2_4 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgnome-desktop2_7 libgnome2_0 libgnomecanvas2_0 libgnomeui2_0 libgtk2.0_0 libintl8 libORBit2_0 libpango1.0_0 librsvg2_2 libstartup-notification1_0 libX11_6 libxml2
 sdesc: "GNOME Desktop file manager"
 ldesc: "The file manager for the GNOME desktop."

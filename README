@@ -3,27 +3,27 @@ nautilus
 The file manager for the GNOME desktop.
 
 Runtime requirements:
-  cygwin-1.7.0-44
+  cygwin-1.7.0-45
   gvfs-1.2.1-1
   libatk1.0_0-1.26.0-1
   libcairo2-1.8.6-10
   libdbus-glib_1_2-0.80-10
   libexempi3-2.0.1-10
   libexif12-0.6.17-10
-  libgailutil18-2.16.0-1
+  libgailutil18-2.16.1-1
   libgcc1-4.3.2-2
   libgconf2_4-2.26.0-1
-  libgdk_pixbuf2.0_0-2.16.0-1
-  libglib2.0_0-2.18.3-1
+  libgdk_pixbuf2.0_0-2.16.1-1
+  libglib2.0_0-2.20.1-1
   libgnome-desktop2_11-2.26.0-1
-  libgtk2.0_0-2.16.0-1
+  libgtk2.0_0-2.16.1-1
   libICE6-1.0.4-10
   libintl8-0.17-10
-  libpango1.0_0-1.24.0-1
+  libpango1.0_0-1.24.1-1
   libSM6-1.1.0-10
   libunique1.0_0-1.0.8-1
-  libX11_6-1.1.5-1
-  libxml2-2.7.2-1
+  libX11_6-1.2-10
+  libxml2-2.7.3-10
   libXrender1-0.9.4-10
 
 Build requirements:
@@ -51,16 +51,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack nautilus-2.26.1-X-src.tar.bz2
+  unpack nautilus-2.26.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./nautilus-2.26.1-X.cygport all
+  cygport ./nautilus-2.26.2-X.cygport all
 
 This will create:
-  /usr/src/nautilus-2.26.1-X-src.tar.bz2
-  /usr/src/nautilus-2.26.1-X.tar.bz2
-  /usr/src/nautilus-devel-2.26.1-X.tar.bz2
+  /usr/src/nautilus-2.26.2-X-src.tar.bz2
+  /usr/src/nautilus-2.26.2-X.tar.bz2
+  /usr/src/nautilus-devel-2.26.2-X.tar.bz2
 
 -------------------------------------------
 
@@ -302,6 +302,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 2.26.2-1 -----
+Version bump.
 
 ----- version 2.26.1-1 -----
 Initial release of GNOME 2.26 for Cygwin 1.7.

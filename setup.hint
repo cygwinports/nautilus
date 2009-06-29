@@ -1,4 +1,4 @@
 category: Gnome
-requires: cygwin GConf2 gvfs libatk1.0_0 libcairo2 libdbus-glib_1_2 libexempi3 libexif12 libgailutil18 libgconf2_4 libgdk_pixbuf2.0_0 libglib2.0_0 libgnome-desktop2_11 libgtk2.0_0 libintl8 libICE6 libpango1.0_0 libSM6 libunique1.0_0 libX11_6 libxml2 libXrender1
+requires: GConf2 gvfs libatk1.0_0 libcairo2 libdbus-glib_1_2 libexempi3 libexif12 libgailutil18 libgconf2_4 libgdk_pixbuf2.0_0 libglib2.0_0 libgnome-desktop2_11 libgtk2.0_0 libintl8 libICE6 libpango1.0_0 libSM6 libunique1.0_0 libX11_6 libxml2 libXrender1
 sdesc: "GNOME Desktop file manager"
 ldesc: "The file manager for the GNOME desktop."

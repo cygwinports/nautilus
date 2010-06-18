@@ -7,4 +7,4 @@ PKG_HINTS="setup devel"
 nautilus_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/share/"
 nautilus_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"
 
-CYGCONF_ARGS="--disable-beagle --disable-tracker"
+CYGCONF_ARGS="--libexecdir=/usr/lib/nautilus --disable-beagle --disable-tracker"

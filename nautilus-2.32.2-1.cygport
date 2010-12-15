@@ -1,0 +1,11 @@
+inherit gnome2
+
+DESCRIPTION="GNOME desktop file manager"
+
+PKG_NAMES="${PN} ${PN}-devel girepository-Nautilus2.0"
+PKG_HINTS="setup devel girepository"
+nautilus_CONTENTS="--exclude=gir* --exclude=gtk-doc etc/ usr/bin/ usr/lib/nautilus/ usr/share/"
+nautilus_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+girepository_Nautilus2_0_CONTENTS="usr/*/gir*/Nautilus-2.0.*"
+
+CYGCONF_ARGS="--libexecdir=/usr/lib/nautilus --disable-beagle --disable-tracker"

@@ -1,5 +1,5 @@
 category: Gnome
-requires: nautilus girepository-Gtk2.0
+requires: nautilus girepository-Gtk3.0
 external-source: nautilus
 sdesc: "GNOME Desktop file manager (GObject Introspection data)"
 ldesc: "The file manager for the GNOME desktop."

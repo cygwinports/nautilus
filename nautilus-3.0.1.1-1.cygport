@@ -4,10 +4,9 @@ DESCRIPTION="GNOME desktop file manager"
 
 PATCH_URI="3.0.0-icons-symbolic.patch"
 
-PKG_NAMES="${PN} ${PN}-devel girepository-Nautilus3.0"
-PKG_HINTS="setup devel girepository"
-nautilus_CONTENTS="--exclude=gir* --exclude=gtk-doc etc/ usr/bin/ usr/lib/nautilus/ usr/share/"
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="setup devel"
+nautilus_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/gir* usr/lib/nautilus/ usr/share/"
 nautilus_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
-girepository_Nautilus3_0_CONTENTS="usr/*/gir*/Nautilus-3.0.*"
 
 CYGCONF_ARGS="--libexecdir=/usr/lib/nautilus --disable-beagle --disable-tracker"

@@ -16,3 +16,5 @@ nautilus_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/gir* usr/lib/nautilus
 nautilus_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
 
 CYGCONF_ARGS="--libexecdir=/usr/lib/nautilus --disable-beagle --disable-tracker"
+
+KEEP_LA_FILES="none"

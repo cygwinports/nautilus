@@ -1,5 +1,0 @@
-category: Gnome
-requires: nautilus libglib2.0-devel libgtk3-devel
-external-source: nautilus
-sdesc: "GNOME Desktop file manager (extension development)"
-ldesc: "The file manager for the GNOME desktop."

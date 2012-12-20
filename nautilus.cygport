@@ -1,6 +1,11 @@
 inherit gnome2
 
-DESCRIPTION="GNOME desktop file manager"
+NAME="nautilus"
+VERSION=3.6.3
+RELEASE=1
+CATEGORY="GNOME"
+SUMMARY="GNOME Desktop file manager"
+DESCRIPTION="The file manager for the GNOME desktop."
 
 DEPEND="gnome-common gtk-doc intltool
 	girepository(Gtk-3.0)
@@ -11,10 +16,8 @@ DEPEND="gnome-common gtk-doc intltool
 	pkgconfig(libnotify)"
 
 PKG_NAMES="${PN} ${PN}-devel"
-PKG_HINTS="setup devel"
+nautilus_REQUIRES="gvfs"
 nautilus_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/gir* usr/lib/nautilus/ usr/share/"
 nautilus_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
 
 CYGCONF_ARGS="--libexecdir=/usr/lib/nautilus --disable-beagle --disable-tracker"
-
-KEEP_LA_FILES="none"

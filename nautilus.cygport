@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="nautilus"
-VERSION=3.6.3
+VERSION=3.8.2
 RELEASE=1
 CATEGORY="GNOME"
 SUMMARY="GNOME Desktop file manager"
@@ -15,9 +15,9 @@ DEPEND="gnome-common gtk-doc intltool
 	pkgconfig(gtk+-3.0)
 	pkgconfig(libnotify)"
 
-PKG_NAMES="${PN} ${PN}-devel"
+PKG_NAMES="${NAME} ${NAME}-devel"
 nautilus_REQUIRES="gvfs"
-nautilus_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/gir* usr/lib/nautilus/ usr/share/"
+nautilus_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/gir* usr/lib/nautilus/ usr/libexec/ usr/share/"
 nautilus_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
 
-CYGCONF_ARGS="--libexecdir=/usr/lib/nautilus --disable-beagle --disable-tracker"
+CYGCONF_ARGS="--disable-beagle --disable-tracker"

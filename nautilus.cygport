@@ -7,6 +7,8 @@ CATEGORY="GNOME"
 SUMMARY="GNOME Desktop file manager"
 DESCRIPTION="The file manager for the GNOME desktop."
 
+PATCH_URI="3.18.1-other-desktops.patch"
+
 DEPEND="gnome-common gtk-doc intltool
 	girepository(Gtk-3.0)
 	pkgconfig(exempi-2.0)

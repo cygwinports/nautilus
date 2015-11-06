@@ -1,0 +1,16 @@
+Based in concept on https://github.com/mate-desktop/caja/commit/23b75da
+
+--- origsrc/nautilus-3.18.1/src/nautilus-application.c	2015-10-06 11:14:05.000000000 -0500
++++ src/nautilus-3.18.1/src/nautilus-application.c	2015-11-06 13:27:30.953138200 -0600
+@@ -876,6 +876,11 @@ nautilus_application_command_line (GAppl
+ 			g_action_group_activate_action (G_ACTION_GROUP (application),
+ 							"close-desktop", NULL);
+ 		}
++	} else if (!g_strstr_len (g_getenv ("XDG_CURRENT_DESKTOP") ?: "", 5, "GNOME")) {
++		DEBUG ("Not GNOME session. Forcing desktop off.");
++		self->priv->desktop_override = TRUE;
++		g_action_group_activate_action (G_ACTION_GROUP (application),
++						"close-desktop", NULL);
+ 	}
+ 
+ 	if (g_variant_dict_contains (options, "no-default-window")) {

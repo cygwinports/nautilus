@@ -1,13 +1,11 @@
 inherit gnome2
 
 NAME="nautilus"
-VERSION=3.18.5
+VERSION=3.22.3
 RELEASE=1
 CATEGORY="GNOME"
 SUMMARY="GNOME Desktop file manager"
 DESCRIPTION="The file manager for the GNOME desktop."
-
-PATCH_URI="3.18.1-other-desktops.patch"
 
 DEPEND="gnome-common gtk-doc intltool
 	girepository(Gtk-3.0)
@@ -19,10 +17,23 @@ DEPEND="gnome-common gtk-doc intltool
 
 PKG_NAMES="${NAME} ${NAME}-devel ${NAME}-doc"
 nautilus_REQUIRES="gvfs"
-nautilus_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/gir* usr/lib/nautilus/ usr/libexec/ usr/share/"
+nautilus_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/gir* usr/lib/nautilus/ usr/share/"
 nautilus_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
 nautilus_doc_CATEGORY="Doc"
 nautilus_doc_SUMMARY="${SUMMARY} (extension API documentation)"
 nautilus_doc_CONTENTS="usr/share/gtk-doc/"
 
-CYGCONF_ARGS="--disable-beagle --disable-tracker"
+CYGCONF_ARGS="--disable-selinux --disable-tracker"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	# Do not package the DBus service file because every FD.o-compliant
+	# file manager should provide org.freedesktop.FileManager1 but only
+	# each desktop's "native" one should run.  The supported solution
+	# is for none of them to register for DBus autostart, but leave the
+	# session manager to launch the service provider for the given desktop.
+	# See also: https://bugzilla.redhat.com/show_bug.cgi?id=1394927#c6
+#	rm -f ${D}/usr/share/dbus-1/services/org.freedesktop.FileManager1.service
+}

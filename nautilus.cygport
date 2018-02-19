@@ -1,11 +1,13 @@
-inherit gnome2
+inherit gnome.org meson
 
 NAME="nautilus"
-VERSION=3.24.2.1
+VERSION=3.26.2
 RELEASE=1
 CATEGORY="GNOME"
 SUMMARY="GNOME Desktop file manager"
 DESCRIPTION="The file manager for the GNOME desktop."
+
+PATCH_URI="3.26-sendto-module.patch"
 
 DEPEND="gnome-common gtk-doc intltool
 	girepository(Gtk-3.0)
@@ -23,11 +25,17 @@ nautilus_doc_CATEGORY="Doc"
 nautilus_doc_SUMMARY="${SUMMARY} (extension API documentation)"
 nautilus_doc_CONTENTS="usr/share/gtk-doc/"
 
-CYGCONF_ARGS="--disable-selinux --disable-tracker"
+CYGMESON_ARGS="
+	-Denable-exif=true
+	-Denable-gtk-doc=true
+	-Denable-packagekit=false
+	-Denable-selinux=false
+	-Denable-xmp=true
+"
 
 src_install() {
-	cd ${B}
-	cyginstall
+	cd ${S}
+	meson_install
 
 	# Do not package the DBus service file because every FD.o-compliant
 	# file manager should provide org.freedesktop.FileManager1 but only
@@ -35,5 +43,5 @@ src_install() {
 	# is for none of them to register for DBus autostart, but leave the
 	# session manager to launch the service provider for the given desktop.
 	# See also: https://bugzilla.redhat.com/show_bug.cgi?id=1394927#c6
-#	rm -f ${D}/usr/share/dbus-1/services/org.freedesktop.FileManager1.service
+	rm -f ${D}/usr/share/dbus-1/services/org.freedesktop.FileManager1.service
 }
